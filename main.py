@@ -1,12 +1,12 @@
 from sanic import Sanic
 from sanic import response
 from sanic.log import logger
-from articles import articles
+from bolg import bolg
 
 
 app = Sanic()
 app.config.from_pyfile("./config.py")
-app.blueprint(articles)
+app.blueprint(bolg)
 
 
 @app.route("/")
